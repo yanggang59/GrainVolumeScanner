@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project(structure_light_scanner)
+set(OpenCV_DIR "/home/thomas/opencv-2.4.11/release/")
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+add_executable(calculate main.cpp cal_3d_coor.cpp skeleton.cpp)
+target_link_libraries(calculate ${OpenCV_LIBS})
